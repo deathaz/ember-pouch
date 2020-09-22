@@ -1,5 +1,5 @@
 {
-  "name": "ember-pouch",
+  "name": "@smart-stocker/pouch",
   "version": "7.0.0",
   "description": "PouchDB adapter for Ember Data",
   "author": "Nolan Lawson",
@@ -29,14 +29,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pouchdb-community/ember-pouch.git"
+    "url": "https://github.com/deathaz/ember-pouch.git"
   },
   "engines": {
     "node": "10.* || >= 12"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/pouchdb-community/ember-pouch/issues"
+    "url": "https://github.com/deathaz/ember-pouch/issues"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
