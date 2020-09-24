@@ -35,8 +35,8 @@ npm install ember-pouch@3.2.2 --save-dev
 ```
 
 This provides
-- `import PouchDB from 'ember-pouch/pouchdb';`
-- `import {Model, Adapter, Serializer} from 'ember-pouch'`
+- `import PouchDB from '@smart-stocker/pouch/pouchdb';`
+- `import {Model, Adapter, Serializer} from '@smart-stocker/pouch'`
 
 `Ember-Pouch` requires you to add a `@attr('string') rev` field to all your models. This is for PouchDB/CouchDB to handle revisions:
 
@@ -58,7 +58,7 @@ If you like, you can also use `Model` from `Ember-Pouch` that ships with the `re
 // app/models/todo.js
 
 import { attr } from '@ember-data/model';
-import { Model } from 'ember-pouch';
+import { Model } from '@smart-stocker/pouch';
 
 export default class TodoModel extends Model {
   @attr('string') title;
@@ -73,8 +73,8 @@ A local PouchDB that syncs with a remote CouchDB looks like this:
 ```javascript
 // app/adapters/application.js
 
-import PouchDB from 'ember-pouch/pouchdb';
-import { Adapter } from 'ember-pouch';
+import PouchDB from '@smart-stocker/pouch/pouchdb';
+import { Adapter } from '@smart-stocker/pouch';
 
 let remote = new PouchDB('http://localhost:5984/my_couch');
 let db = new PouchDB('local_pouch');
@@ -92,7 +92,7 @@ export default class ApplicationAdapter extends Adapter {
 You can also turn on debugging:
 
 ```javascript
-import PouchDB from 'ember-pouch/pouchdb';
+import PouchDB from '@smart-stocker/pouch/pouchdb';
 
 // For v7.0.0 and newer you must first load the 'pouchdb-debug' plugin
 // see https://github.com/pouchdb/pouchdb/tree/39ac9a7a1f582cf7a8d91c6bf9caa936632283a6/packages/node_modules/pouchdb-debug
@@ -356,7 +356,7 @@ Add a `DS.attr('attachments')` field to your model. Provide a default value for 
 ```javascript
 // myapp/models/photo-album.js
 import { attr } from '@ember-data/model';
-import { Model } from 'ember-pouch';
+import { Model } from '@smart-stocker/pouch';
 
 export default class PhotoAlbumModel extends Model {
   @attr('attachments', {
@@ -427,7 +427,7 @@ With PouchDB, you also get access to a whole host of [PouchDB plugins](http://po
 
 For example, to use the `pouchdb-authentication` plugin like this using `ember-auto-import`:
 ```javascript
-import PouchDB from 'ember-pouch/pouchdb';
+import PouchDB from '@smart-stocker/pouch/pouchdb';
 import auth from 'pouchdb-authentication';
 
 PouchDB.plugin(auth);
@@ -490,7 +490,7 @@ Ember-data can be slow to load large numbers of records which have lots of relat
 // app/models/post.js
 
 import { attr, belongsTo, hasMany } from '@ember-data/model';
-import { Model } from 'ember-pouch';
+import { Model } from '@smart-stocker/pouch';
 
 export default class PostModel extends Model {
   @attr('string') title;
@@ -503,7 +503,7 @@ export default class PostModel extends Model {
 // app/models/post-summary.js
 
 import { attr } from '@ember-data/model';
-import { Model } from 'ember-pouch';
+import { Model } from '@smart-stocker/pouch';
 
 export default class PostSummaryModel extends Model {
   @attr('string') title;

@@ -1,6 +1,6 @@
 import config from '<%= dasherizedPackageName %>/config/environment';
-import PouchDB from 'ember-pouch/pouchdb';
-import { Adapter } from 'ember-pouch';
+import PouchDB from '@smart-stocker/pouch/pouchdb';
+import { Adapter } from '@smart-stocker/pouch';
 import { assert } from '@ember/debug';
 import { isEmpty } from '@ember/utils';
 

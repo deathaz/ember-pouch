@@ -2,7 +2,7 @@ import { defer } from 'rsvp';
 import { assert } from '@ember/debug';
 import { isEmpty } from '@ember/utils';
 import Adapter from 'dummy/adapter';
-import PouchDB from 'ember-pouch/pouchdb';
+import PouchDB from '@smart-stocker/pouch/pouchdb';
 import config from 'dummy/config/environment';
 
 function createDb() {

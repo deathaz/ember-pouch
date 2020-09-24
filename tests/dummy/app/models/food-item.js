@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-import { Model } from 'ember-pouch';
+import { Model } from '@smart-stocker/pouch';
 
 // N.b.: awkward model name is to test getRecordTypeName
 

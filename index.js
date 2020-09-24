@@ -29,9 +29,9 @@ module.exports = {
   },
 
   treeForVendor: function() {
-    var content = "Ember.libraries.register('Ember Pouch', '" + version + "');";
+    var content = "Ember.libraries.register('@smart-stocker/pouch', '" + version + "');";
     var registerVersionTree = writeFile(
-      'ember-pouch/register-version.js',
+      '@smart-stocker/pouch/register-version.js',
       content
     );
 
@@ -48,7 +48,7 @@ module.exports = {
       app = app.app;
     }
 
-    app.import('vendor/ember-pouch/register-version.js');
+    app.import('vendor/@smart-stocker/pouch/register-version.js');
 
     let env = this.project.config(app.env);
     if (env.emberpouch) {

@@ -1,3 +1,3 @@
-import { Serializer } from 'ember-pouch';
+import { Serializer } from '@smart-stocker/pouch';
 
 export default Serializer.extend();

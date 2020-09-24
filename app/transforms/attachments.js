@@ -1,1 +1,1 @@
-export { default } from 'ember-pouch/transforms/attachments';
+export { default } from '@smart-stocker/pouch/transforms/attachments';
